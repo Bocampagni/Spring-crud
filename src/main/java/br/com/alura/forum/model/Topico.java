@@ -23,6 +23,17 @@ public class Topico {
 	@Enumerated(EnumType.STRING)
 	private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
 	
+	public Topico() {
+		
+	}
+	
+	public Topico(String titulo, String mensagem, Curso curso) {
+		super();
+		this.titulo = titulo;
+		this.mensagem = mensagem;
+		this.curso = curso;
+	}
+
 	@ManyToOne
 	private Usuario autor;
 	@ManyToOne
