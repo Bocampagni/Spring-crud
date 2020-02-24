@@ -38,6 +38,8 @@ public class TopicoDto {
 		
 		
 		return topicos.stream().map(TopicoDto::new).collect(Collectors.toList());
+		
+		//Stream() é como pegar todos os dados de uma collection e enfiar em um cano, podendo aplicar filtros a esse cano.
 	}
 	
 	
