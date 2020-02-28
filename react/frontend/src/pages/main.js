@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import api from '../service/api';
+import Table from './table';
 
 
 
 export default class Main extends Component{
     state = {
+        autores: this.props,
         login: null,
         avatar_url: null,
         url: null,
@@ -26,15 +28,31 @@ export default class Main extends Component{
     }
 
     render(){
-        const {login, avatar_url, url, name} = this.state;
+        const {login, avatar_url, url, name, autores} = this.state;
 
         return(
-            <article>
-                <img alt={name} src={avatar_url}></img>
-                <strong>{name}</strong>
-                <aside>{login}</aside>
-                <a href= {`https://github.com/${login}`} target = '_blank' >Acessar</a>
-            </article>
+            <div className = "main">
+                <article>
+                    <img alt={name} src={avatar_url}></img>
+                    <strong>{name}</strong>
+                    <aside>{login}</aside>
+                    <a href= {`https://github.com/${login}`} target = '_blank' >Acessar</a>
+                </article>
+
+
+                <thead>
+                    <td>{this.autores.}</td>
+                    <td>Nome</td>
+                    <td>Livro</td>
+                    <td>Preco</td>
+                    <td><button>Remover</button></td>
+                </thead>
+                
+                {/* <Table autores = {autores} /> */}
+
+
+            </div>
+            
 
         );
     };
