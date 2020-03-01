@@ -28,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <Main autores = {autores} />
+      {console.log(autores)}
     </div>
   );
 }
