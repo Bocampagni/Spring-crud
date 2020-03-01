@@ -2,7 +2,7 @@ import React from 'react';
 import Main from './pages/main'
 
 function App() {
-
+  //I cant fixe the this.props of table.
   const autores =  [
     {
       nome: 'Paulo',
