@@ -30,7 +30,7 @@ export default class Main extends Component{
         const {autores, removeAutor} = this.props;
 
         return(
-                <table>
+                <table className = "centered highlight">
                     <Tablehead />
                     <Table autores = {autores} removeAutor = { removeAutor } />
                 </table>           

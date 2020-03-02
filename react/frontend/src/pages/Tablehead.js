@@ -7,7 +7,11 @@ export default class Tablehead extends Component{
     render(){
         return(
             <thead>
-        <tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr>
+                <tr>
+                    <th>Nome</th>
+                    <th>Livro</th>
+                    <th>Preço</th>
+                </tr>
     </thead>
         )
     }

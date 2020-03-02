@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
-import Main from './pages/main'
+import React, { Component, Fragment } from 'react';
+import Main from './pages/main';
+import Form from './pages/formulario';
+import 'materialize-css/dist/css/materialize.min.css'
+import Header from './pages/Header';
 
 class App extends Component {
   //I cant fixe the this.props of table.
@@ -47,12 +50,20 @@ class App extends Component {
       }
     );
   }
+
+  escutadorDeSubmit = autor => {
+    this.setState({ autores: [...this.state.autores, autor]})
+  }
   
   render(){
     return (
-      <div className="App">
+
+      <Fragment>
+        <Header />
         <Main autores = {this.state.autores} removeAutor = {this.removeAutor} />
-      </div>
+        <Form escutadorDeSubmit = {this.escutadorDeSubmit} />
+      </Fragment>
+
   );
   }
 }
